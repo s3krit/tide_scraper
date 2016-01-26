@@ -1,8 +1,6 @@
 # TideScraper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tide_scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+TideScraper simple gem for scraping tidal predictons from the UKHO's EasyTide system.
 
 ## Installation
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Assuming id = a UKHO port ID as a string:
+
+```
+require 'tide_scraper'
+scraper = TideScraper::Scraper.new
+puts scraper.get_prediction(id)
+```
 
 ## Development
 
@@ -32,10 +36,10 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/tide_scraper.
+Bug reports and pull requests are welcome on GitHub at https://github.com/s3krit/tide_scraper.
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [GPL-3.0](http://opensource.org/licenses/GPL-3.0).
 
